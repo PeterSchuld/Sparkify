@@ -40,7 +40,7 @@ Essential Skills
 
 
 ### All the project code is contained in the Jupyter notebook: ###
-Sparkify_PeterSchuld 
+Sparkify_small_PeterSchuld 
 
 ### All the project data is contained in the json-file: ###
 mini_sparkify_event_data.json
