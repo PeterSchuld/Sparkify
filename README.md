@@ -1,9 +1,32 @@
 # Capstone project in the Udacity Data Scientist nanodegree program (Project No.4) 
 
 ### Project Description
-The imaginary start-up company Sparkify offers music streaming service to many users in the USA. Sparkify keeps a Log file with 18 fields for every user interaction (e.g., userId, name of song played, length of song played, name of artist). Soon the data volume of the log file has exceeded the available memory space on standard desktop computers, and the company has opted for using the distributed file system Apache Spark™. Udacity™ provides the full dataset with 12GB on AWS™ S3, and you can run a Spark cluster on the cloud using AWS or IBM™ Cloud to analyse the large amount of data. 
+The imaginary start-up company Sparkify offers music streaming service to users in the USA. Many users stream their favourite songs to our service every day either using the free tier that places advertisements between the songs, or using the premium subscription model, where they stream the music for free but pay a monthly flat rate. Users can upgrade, downgrade, or cancel their service at any time. So, it is crucial to make sure the users love the service. Every time a user interacts with the service such as playing songs, logging out, liking a song with a thumps-up, hearing an ad, or downgrading their service, it generates data. All this data contains key insides for keeping the users happy and helping Sparkify’s business thrive.  It is our job on the data team to predict which users are at risk to churn either downgrade from premium to free tier or cancelling their service altogether.  If we can accurately identify these users before they leave, Sparkify can offer them discounts and incentives, potentially saving the business millions in revenue. 
 
-In this project, we use Spark SQL and Spark Dataframes to analyse a small subset of the user data on Sparkify's Log file. We use PySpark's Machine Learning Library (MLlib) to predict churn of Sparkify's users. After examining the subset of the Log file, we identify 37 features in the user data that can help to detect pending churn. We create a list of features for every user in the subset to train ML models, and we compare the performance of four MLlib classification models for churn prediction (Logistic regression, Random Forest classifier, Gradient-boosted tree classifier, Linear Support Vector Machine). We determine our winning model Gradient-boosted tree classifier based on test accuracy and F-score results on the validation set. However, a tuned version of the Logistic Regression model performs almost as good as the winning model, and it needs much less time to train compared to the Gradient-boosted tree model. Since the churned users are a small subset, we use F1 score as the metric to optimize. We use cross-validation to improve usage of the available data, and because it gives us more information about the algorithm performance. The Gradient-boosted tree model achieves a F1 score of 0.71 on the validation set, and the tuned Logistic Regression Model achieves a F1 score of 0.70. In comparison, the Random Forest classifier and Linear Support Vector Machine models achieve F1 scores of 0.67 and 0.69, respectively. 
+Sparkify keeps a Log file with 18 fields for every user interaction (e.g., userId, name of song played, length of song played, name of artist). Soon the data volume of the log file has exceeded the available memory space on standard desktop computers, and the company has opted for using the distributed file system Apache Spark™. Udacity™ provides the full dataset with 12GB on AWS™ S3, and you can run a Spark cluster on the cloud using AWS or IBM™ Cloud to analyse the large amount of data. 
+
+### Project Steps
+- Load data into Spark
+- Explore and Clean Data
+- Create Features
+- Build Models 
+- Predict Churn
+ 
+In this project, we use Spark SQL and Spark Dataframes to analyse a small subset of the user data on Sparkify's Log file. We use PySpark's Machine Learning Library (MLlib) to predict churn of Sparkify's users. After examining the subset of the Log file, we identify 37 features in the user data that can help to detect pending churn. We create a list of features for every user in the subset to train ML models, and we compare the performance of four MLlib classification models for churn prediction (Logistic regression, Random Forest classifier, Gradient-boosted tree classifier, Linear Support Vector Machine). 
+
+We determine our winning model, a tuned version of the Logistic Regression model. Since the churned users are a small subset, we use F1 score as the metric to optimize. We use cross-validation to improve usage of the available data, and because it gives us more information about the algorithm performance. 
+
+
+### Results
+The winning model for churn prediction is a tuned Logistic Regression Model that achieves an Accuracy of 0.8 and a F1 score of 0.73 on the validation set. 
+
+for comparison 
+
+Accuracy / F1-Score on the validation set
+- 0.80 / 0.73	Best Logistic Regression Model
+- 0.73 / 0.69 	Random Forest classifier		 
+- 0.73 / 0.71	Gradient-boosted Tree classifier		
+- 0.73 / 0.69	Linear Support Vector Machine 		
 
 Our churn prediction model should help Sparkify to identify users for special promotions or other measures to prevent them from cancelling the service. However, the model should avoid falsely classifying loyal users as vulnerable to churn, because offering discounts or other promotions is expensive and should be targeted to users we would otherwise lose as customers.    
 
@@ -35,8 +58,9 @@ mini_sparkify_event_data.json
 The data is provided by Udacity.
 
 ### Acknowledgements
-I would like to express my sincere gratitute to Udacity for providing the data and to AWS and IBM Watson for cooperating with Udacity and providing cloud services essential for this project. 
+I would like to express my sincere gratitude to Udacity for providing the data and to IBM Watson for cooperating with Udacity and providing free cloud services essential for this project.  
 
+ 
 
 ![grafik](https://user-images.githubusercontent.com/59873708/127336175-2dfef549-206b-48f4-9327-482a62f764cb.png)
 
