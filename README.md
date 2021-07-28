@@ -1,5 +1,4 @@
 # Capstone project in the Udacity Data Scientist nanodegree program (Project No.4) 
-by Peter Hermann Schuld, Summer 2021
 
 ### Project Description
 The imaginary start-up company Sparkify offers music streaming service to many users in the USA. Sparkify keeps a Log file with 18 fields for every user interaction (e.g., userId, name of song played, length of song played, name of artist). Soon the data volume of the log file has exceeded the available memory space on standard desktop computers, and the company has opted for using the distributed file system Apache Spark™. Udacity™ provides the full dataset with 12GB on AWS™ S3, and you can run a Spark cluster on the cloud using AWS or IBM™ Cloud to analyse the large amount of data. 
@@ -35,8 +34,8 @@ mini_sparkify_event_data.json
 ### Data Source ####
 The data is provided by Udacity.
 
-
-
+### Acknowledgements
+I would like to express my sincere gratitute to Udacity for providing the data and to AWS and IBM Watson for cooperating with Udacity and providing cloud services essential for this project. 
 
 
 ![grafik](https://user-images.githubusercontent.com/59873708/127336175-2dfef549-206b-48f4-9327-482a62f764cb.png)
