@@ -5,6 +5,11 @@ The imaginary start-up company Sparkify offers music streaming service to users 
 
 Sparkify keeps a Log file with 18 fields for every user interaction (e.g., userId, name of song played, length of song played, name of artist). Soon the data volume of the log file has exceeded the available memory space on standard desktop computers, and the company has opted for using the distributed file system Apache Spark™. Udacity™ provides the full dataset with 12GB on AWS™ S3, and you can run a Spark cluster on the cloud using AWS or IBM™ Cloud to analyse the large amount of data. 
 
+### Blogpot 
+
+In this article on medium.com  I describe the project in greater detail with a focus on technical questions.
+https://peterschuld.medium.com/sparkify-project-45d8941fa995
+
 ### Project Steps
 - Load data into Spark
 - Explore and Clean Data
